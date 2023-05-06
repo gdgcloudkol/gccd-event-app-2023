@@ -103,13 +103,13 @@ class AuthenticationRepository {
     required String referrer,
   }) async {
     Response response = await _dioApiClient.patchData(
-        endPoint: addReferralEndpoint,
-        dataPayload: {
-          'referrer': referrer,
-        },
-        headers: buildAuthHeader(
-          authToken,
-        ),
+      endPoint: addReferralEndpoint,
+      dataPayload: {
+        'referrer': referrer,
+      },
+      headers: buildAuthHeader(
+        authToken,
+      ),
     );
 
     if (response.statusCode == 200) {
@@ -136,7 +136,6 @@ class AuthenticationRepository {
     if (response.statusCode == 200) {
       final updateResponse = response.data;
 
-      print(updateResponse);
       return Profile.fromJson(updateResponse);
     } else {
       throw Exception('Error updating profile. Please try again.');

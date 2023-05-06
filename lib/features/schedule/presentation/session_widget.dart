@@ -91,7 +91,7 @@ class SessionWidget extends StatelessWidget {
               : Column(
                   children: session!.speakers!
                       .map((speaker) => Container(
-                          margin: EdgeInsets.only(bottom: 6),
+                          margin: const EdgeInsets.only(bottom: 6),
                           padding: EdgeInsets.symmetric(
                               vertical: 6, horizontal: screenWidth! * 0.02),
                           decoration: BoxDecoration(

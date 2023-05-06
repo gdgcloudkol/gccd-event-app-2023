@@ -18,7 +18,7 @@ class SessionDetails extends StatelessWidget {
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
-        side: BorderSide(
+        side: const BorderSide(
           color: Colors.black,
           width: 0.5,
         ),
@@ -67,7 +67,7 @@ class SessionDetails extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  context.router.push(SpeakersRoute());
+                  context.router.push(const SpeakersRoute());
                 },
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

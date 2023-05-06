@@ -16,7 +16,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await NotificationService().initNotification();
-  await NotificationService().subscribeToTopic("all");
+  // await NotificationService().subscribeToTopic("all");
   DjangoflowAppRunner.run(
     onException: (exception, stackTrace) {
       debugPrint('Exception Caught -- $exception');
